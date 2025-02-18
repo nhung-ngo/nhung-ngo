@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+  Name: Nhung Ngo
+  Date: 02.18.2025
+  CSC 372-01
+
+  This is the main index.html page for the Campus Dining Guide.
+  It provides information about recommended restaurants and their top dishes.
+  The page includes a dynamic menu where users can select a dish to view details.
+  A link to the Meal Plan page allows users to plan their meals.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Dining Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Dining Guide</h1>
+    </header>
+    <section id="introduction">
+        <p>Are you a culinary adventurer in search of the perfect meal on campus? Look no further! 
+            We've curated a list of the most exceptional dishes that are sure to tantalize your taste buds. 
+            From fresh pizzas to mouthwatering sushi, this list has got you covered. So, put on your foodie hat 
+            and let's dive into the delightful world of flavors. Whether you’re in the mood for a quick bite or a gourmet experience, 
+            our recommendations will satisfy your cravings and elevate your dining experience!</p>
+    </section>
+
+    <section class="restaurant-list">
+        <div class="restaurant">
+            <h2>Pizza Haven</h2>
+            <p>📍 Location: Student Union | 🕒 Hours: 11 AM - 10 PM</p>
+            <p>🔥 Specialty: Freshly baked pizzas with a variety of toppings.</p>
+        </div>
+    </section>
+
+    <!-- Image Menu Section -->
+    <section>
+        <div id="menu">
+            <img src="https://www.cobsbread.com/us/wp-content/uploads/2022/09/Pepperoni-pizza-850x630-1-650x480.png" 
+                 alt="Pepperoni Pizza" 
+                 class="dish" 
+                 data-name="Pepperoni Pizza" 
+                 data-description="Classic pepperoni with mozzarella" 
+                 data-price="$8.99">
+
+            <img src="https://www.bakedambrosia.com/wp-content/uploads/2016/03/Chicken-BBQ-Pizza.jpg" 
+                 alt="BBQ Chicken Pizza" 
+                 class="dish" 
+                 data-name="BBQ Chicken Pizza" 
+                 data-description="Grilled chicken, BBQ sauce, and red onions" 
+                 data-price="$9.49">
+
+            <img src="https://store.iifound.org/wp-content/uploads/2023/09/veggie_delight.jpg" 
+                 alt="Veggie Delight" 
+                 class="dish" 
+                 data-name="Veggie Delight" 
+                 data-description="Mushrooms, olives, bell peppers, and feta cheese" 
+                 data-price="$8.79">
+        </div>
+    </section>
+    
+    <section id="dish-details" class="hidden">
+        <h2 id="dish-name"></h2>
+        <p id="dish-description"></p>
+        <p id="dish-price"></p>
+    </section>
+    
+    <nav>
+        <a href="meal-plan.html">Go to Meal Plan</a>
+    </nav>
+    
+    <script src="script.js"></script>
+</body>
+</html>
