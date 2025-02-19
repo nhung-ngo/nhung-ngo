@@ -1,29 +1,80 @@
-let totalPrice = 0;
-const mealList = document.getElementById("meal-list");
-const totalPriceElement = document.getElementById("total-price");
+document.addEventListener("DOMContentLoaded", function () {
+    const dishList = document.querySelectorAll("#dish-list li button");
+    const mealList = document.getElementById("meal-list");
+    const totalPriceElement = document.getElementById("total-price");
 
-function addToMealPlan(name, price) {
-    // Create a new meal list item
-    const listItem = document.createElement("li");
-    listItem.textContent = `${name} - $${price.toFixed(2)}`;
+    let totalPrice = 0;
+    let mealPlan = {}; 
+
+   
+    function addToMealPlan(dishName, price) {
+        
+        if (mealPlan[dishName]) {
+            mealPlan[dishName].quantity++;
+        } else {
+            mealPlan[dishName] = { price: price, quantity: 1 };
+        }
+
+        totalPrice += price;
+
+        updateMealPlanUI();
+    }
+
+    function removeFromMealPlan(dishName) {
+        if (mealPlan[dishName]) {
+            totalPrice -= mealPlan[dishName].price; 
+            mealPlan[dishName].quantity--;
+
+            if (mealPlan[dishName].quantity === 0) {
+                delete mealPlan[dishName]; 
+            }
+
+            updateMealPlanUI();
+        }
+    }
+
     
-    // Add remove button
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
-    removeButton.onclick = function () {
-        mealList.removeChild(listItem);
-        totalPrice -= price;
-        updateTotal();
-    };
+    function updateMealPlanUI() {
+        mealList.innerHTML = "";
 
-    listItem.appendChild(removeButton);
-    mealList.appendChild(listItem);
+        for (const dish in mealPlan) {
+            const listItem = document.createElement("li");
 
-    // Update total price
-    totalPrice += price;
-    updateTotal();
-}
+            
+            const dishText = document.createTextNode(
+                dish + " - $" + mealPlan[dish].price.toFixed(2) + " (x" + mealPlan[dish].quantity + ") "
+            );
 
-function updateTotal() {
-    totalPriceElement.textContent = totalPrice.toFixed(2);
-}
+            
+            const removeButton = document.createElement("button");
+            removeButton.className = "remove-btn";
+            removeButton.setAttribute("data-name", dish);
+            removeButton.textContent = "Remove";
+
+            
+            removeButton.addEventListener("click", function () {
+                removeFromMealPlan(dish);
+            });
+
+            
+            listItem.appendChild(dishText);
+            listItem.appendChild(removeButton);
+
+            
+            mealList.appendChild(listItem);
+        }
+
+       
+        totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+
+    
+    dishList.forEach(button => {
+        button.addEventListener("click", function () {
+            const parentLi = this.parentElement;
+            const dishName = parentLi.getAttribute("data-name");
+            const dishPrice = parseFloat(parentLi.getAttribute("data-price"));
+            addToMealPlan(dishName, dishPrice);
+        });
+    });
+});

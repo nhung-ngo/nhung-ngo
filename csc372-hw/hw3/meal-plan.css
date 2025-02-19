@@ -35,18 +35,18 @@ header a{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Add spacing between list items */
+
 #dish-list li, 
 #meal-list li {
-    margin-bottom: 15px; /* Adjust space between rows */
+    margin-bottom: 15px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Ensure buttons have some spacing */
+
 button {
-    margin-left: 15px; /* Adds space between text and buttons */
+    margin-left: 15px; 
     background-color: #007bff;
     color: white;
     border: none;

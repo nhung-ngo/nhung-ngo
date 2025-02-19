@@ -10,69 +10,129 @@
   A link to the Meal Plan page allows users to plan their meals.
 -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Dining Guide</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
 
     <header>
         <h1>Campus Dining Guide</h1>
+        <a href="../../index.html">Home</a>
     </header>
     <section id="introduction">
-        <p>Are you a culinary adventurer in search of the perfect meal on campus? Look no further! 
-            We've curated a list of the most exceptional dishes that are sure to tantalize your taste buds. 
-            From fresh pizzas to mouthwatering sushi, this list has got you covered. So, put on your foodie hat 
-            and let's dive into the delightful world of flavors. Whether you’re in the mood for a quick bite or a gourmet experience, 
+        <p>Are you a culinary adventurer in search of the perfect meal on campus? Look no further!
+            We've curated a list of the most exceptional dishes that are sure to tantalize your taste buds.
+            From fresh pizzas to mouthwatering sushi, this list has got you covered. So, put on your foodie hat
+            and let's dive into the delightful world of flavors. Whether you’re in the mood for a quick bite or a
+            gourmet experience,
             our recommendations will satisfy your cravings and elevate your dining experience!</p>
     </section>
 
-    <section class="restaurant-list">
+    <!-- Pizza Section -->
+    <section class="restaurant-container">
         <div class="restaurant">
             <h2>Pizza Haven</h2>
             <p>📍 Location: Student Union | 🕒 Hours: 11 AM - 10 PM</p>
             <p>🔥 Specialty: Freshly baked pizzas with a variety of toppings.</p>
+            <p>💲</p>
+        </div>
+
+        <section class="dish-details hidden">
+            <h2 class="dish-name"></h2>
+            <p class="dish-description"></p>
+            <p class="dish-price"></p>
+        </section>
+
+        <!-- Pizza Menu -->
+        <div class="menu-container">
+            <img src="https://www.cobsbread.com/us/wp-content/uploads/2022/09/Pepperoni-pizza-850x630-1-650x480.png"
+                alt="Pepperoni Pizza" class="dish" data-name="Pepperoni Pizza"
+                data-description="Classic pepperoni with mozzarella" data-price="$8.99">
+
+            <img src="https://www.bakedambrosia.com/wp-content/uploads/2016/03/Chicken-BBQ-Pizza.jpg"
+                alt="BBQ Chicken Pizza" class="dish" data-name="BBQ Chicken Pizza"
+                data-description="Grilled chicken, BBQ sauce, and red onions" data-price="$9.49">
+
+            <img src="https://store.iifound.org/wp-content/uploads/2023/09/veggie_delight.jpg" alt="Veggie Delight"
+                class="dish" data-name="Veggie Delight"
+                data-description="Mushrooms, olives, bell peppers, and feta cheese" data-price="$8.79">
         </div>
     </section>
 
-    <!-- Image Menu Section -->
-    <section>
-        <div id="menu">
-            <img src="https://www.cobsbread.com/us/wp-content/uploads/2022/09/Pepperoni-pizza-850x630-1-650x480.png" 
-                 alt="Pepperoni Pizza" 
-                 class="dish" 
-                 data-name="Pepperoni Pizza" 
-                 data-description="Classic pepperoni with mozzarella" 
-                 data-price="$8.99">
+    <!-- Sushi Section -->
+    <section class="restaurant-container">
+        <div class="restaurant">
+            <h2>Delightful Sushi</h2>
+            <p>📍 Location: Student Union | 🕒 Hours: 11 AM - 10 PM</p>
+            <p>🔥 Specialty: Freshly prepared sushi with fresh ingredients.</p>
+            <p>💲💲</p>
+        </div>
 
-            <img src="https://www.bakedambrosia.com/wp-content/uploads/2016/03/Chicken-BBQ-Pizza.jpg" 
-                 alt="BBQ Chicken Pizza" 
-                 class="dish" 
-                 data-name="BBQ Chicken Pizza" 
-                 data-description="Grilled chicken, BBQ sauce, and red onions" 
-                 data-price="$9.49">
+        <section class="dish-details hidden">
+            <h2 class="dish-name"></h2>
+            <p class="dish-description"></p>
+            <p class="dish-price"></p>
+        </section>
 
-            <img src="https://store.iifound.org/wp-content/uploads/2023/09/veggie_delight.jpg" 
-                 alt="Veggie Delight" 
-                 class="dish" 
-                 data-name="Veggie Delight" 
-                 data-description="Mushrooms, olives, bell peppers, and feta cheese" 
-                 data-price="$8.79">
+        <!-- Sushi Menu -->
+        <div class="menu-container">
+            <img src="https://www.matsuhisarestaurants.com/wp-content/uploads/2019/07/shutterstock_580685365.jpg"
+                alt="Nigiri Sushi" class="dish" data-name="Nigiri Sushi"
+                data-description="Delicious fresh sushi rolls with  seafood, as well as vegetables or eggs"
+                data-price="$10.99">
+
+            <img src="https://hips.hearstapps.com/hmg-prod/images/spicy-tuna-roll-2-1652806800.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
+                alt="Spicy Tuna Roll" class="dish" data-name="Spicy Tuna Roll"
+                data-description="Spicy tuna with fresh avocado and seaweed." data-price="$12.49">
+
+            <img src="https://norecipes.com/wp-content/uploads/2019/12/best-california-roll-003.jpg"
+                alt="California Roll" class="dish" data-name="California Roll"
+                data-description="Crab, avocado, and cucumber wrapped in rice and seaweed." data-price="$11.99">
         </div>
     </section>
-    
-    <section id="dish-details" class="hidden">
-        <h2 id="dish-name"></h2>
-        <p id="dish-description"></p>
-        <p id="dish-price"></p>
+
+    <!-- Ramen Section -->
+    <section class="restaurant-container">
+        <div class="restaurant">
+            <h2>Heavenly Ramen</h2>
+            <p>📍 Location: Food Court | 🕒 Hours: 12 PM - 9 PM</p>
+            <p>🔥 Specialty: Authentic Japanese ramen with rich broth and fresh toppings.</p>
+            <p>💲💲💲</p>
+        </div>
+
+
+        <section class="dish-details hidden">
+            <h2 class="dish-name"></h2>
+            <p class="dish-description"></p>
+            <p class="dish-price"></p>
+        </section>
+
+        <!-- Ramen Menu -->
+        <div class="menu-container">
+            <img src="https://www.justonecookbook.com/wp-content/uploads/2023/04/Spicy-Shoyu-Ramen-8025-II.jpg"
+                alt="Shoyu Ramen" class="dish" data-name="Shoyu Ramen"
+                data-description="Soy sauce-based ramen with bamboo shoots and pork." data-price="$11.99">
+
+            <img src="https://www.justonecookbook.com/wp-content/uploads/2019/05/Miso-Ramen-II.jpg" alt="Miso Ramen"
+                class="dish" data-name="Miso Ramen" data-description="Rich miso broth with butter and corn toppings."
+                data-price="$12.99">
+
+            <img src="https://i0.wp.com/www.craftycookbook.com/wp-content/uploads/2023/03/img_8918_jpg.jpg?ssl=1"
+                alt="Tonkotsu Ramen" class="dish" data-name="Tonkotsu Ramen"
+                data-description="Creamy pork bone broth with chashu pork and green onions." data-price="$13.49">
+        </div>
     </section>
-    
+
     <nav>
         <a href="meal-plan.html">Go to Meal Plan</a>
     </nav>
-    
-    <script src="script.js"></script>
+
 </body>
+
 </html>
