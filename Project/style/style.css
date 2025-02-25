@@ -53,9 +53,11 @@ section{
     left: 20px;
     display: flex;
     flex: 1;
+    height: 150px; 
+    width: auto;
 }
 
-.logo {
+.logo-container img {
     height: 150px; 
     width: auto;
     
