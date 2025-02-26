@@ -238,21 +238,31 @@ img{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .cart-items{
-    width: 70%;
+    width: 65%;
 }
 .cart-item{
     display: flex;
     align-items: center;
     gap: 20px;
     margin: 20px;
+    padding: 7px;
+}
+.cart-item img{
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
 }
 .item-details{
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
 }
 
 .order-summary{
-    width: 20%;
+    width: 25%;
+}
+.order-summary h2{
+    text-align: center;
 }
 
 /* footer */
