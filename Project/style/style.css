@@ -4,33 +4,29 @@ body {
     margin: 0;
     padding: 0;
 }
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: relative;
-    height: 100px;
-
-}
-
-section{
-    margin-top: 0px;
-    padding-top: 0px;
-}
 
 .nav-links {
-   display: flex;
-   justify-content: center;
-   flex: 2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-links a {
-    text-decoration: none;
+.nav-text a {
     color: black;
-    font-size: 17px;
+    text-decoration: none;
+    align-items: center;
+    font-weight: bold;
     padding: 10px 50px;
-
+}
+.nav-text a:hover{
+    text-decoration: underline;
+    
+}
+.logo-container img {
+    height: 90px; 
+    width: auto;
+    
 }
 
 .splash {
@@ -49,19 +45,6 @@ section{
     margin-right: 30px;
 }
 
-.logo-container{
-    left: 20px;
-    display: flex;
-    flex: 1;
-    height: 150px; 
-    width: auto;
-}
-
-.logo-container img {
-    height: 150px; 
-    width: auto;
-    
-}
 
 .splash-content {
     flex: 1;
@@ -105,7 +88,7 @@ section{
     border-radius: 5px;
 }
 
-.search-bar button {
+.search-bar button, .item-details button, .order-summary button {
     padding: 8px 15px;
     background-color: rgb(180, 228, 180);
     color: black;
@@ -146,7 +129,7 @@ section{
 .featured-products a{
     text-decoration: none;
     font-size: 18px;
-    color: green;
+    color: #008000;
 }
 
 .product-grid {
@@ -216,7 +199,8 @@ img{
     color: black;
     padding: 10px 15px;
     border: none;
-    font-size: 16px;
+    cursor: pointer;
+    border: none;
 }
 
 .back-to-shop {

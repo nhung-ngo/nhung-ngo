@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Nhung Ngo
+    Date: 02.25.2025
+    CSC 372-01
+
+    This page allows admins to upload product data in bulk using a file (JSON, CSV, or text). 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bulk Upload</title>
+    <link rel="stylesheet" type="text/css" href="style/admin.css">
+    <link rel="icon" type="image/gif" href="images/logo.png">
+
+</head>
+<body>
+    <header>
+        <nav class="admin-nav">
+            <a href="admin-upload.html" class="logo">
+                <img src="images/logo.png">
+            </a>
+            <div>
+                <a href="admin-upload.html">Bulk Upload</a>
+                <a href="admin-products.html">Manage Products</a>
+                <a href="index.html">Sign Out</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>Admin - Bulk Upload</h1>
+        <form>
+            <input type="file" accept=".json,.csv,.txt">
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+    <footer>
+        <pre class="copyright">
+            &copy; 2025 MODI's ADMIN.
+        </pre>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Nhung Ngo
+    Date: 02.25.2025
+    CSC 372-01
+    
+    This page lists all products available for admin management, allowing editing, deleting, and filtering. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Products</title>
+    <link rel="stylesheet" type="text/css" href="style/admin.css">
+    <link rel="icon" type="image/gif" href="images/logo.png">
+
+</head>
+<body>
+    <header>
+        <nav class="admin-nav">
+            <a href="admin-upload.html" class="logo">
+                <img src="images/logo.png">
+            </a>
+            <div>
+                <a href="admin-upload.html">Bulk Upload</a>
+                <a href="admin-products.html">Manage Products</a>
+                <a href="index.html">Sign Out</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>Admin - Product Management</h1>
+        <div class="button-container">
+            <button class="add-new">Add New Product</button>
+        </div>
+        
+        <table>
+            <tr><th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Matte Flower Case</td>
+                <td>$14.99</td>
+                <td><a href="product-edit.html"><button>Edit</button></a> <button>Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dinosaurs Couple Case</td>
+                <td>$12.99</td>
+                <td><a href="product-edit.html"><button>Edit</button></a> <button>Delete</button></td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <pre class="copyright">
+    &copy; 2025 MODI's ADMIN.
+        </pre>
+    </footer>
+</body>
+</html>
