@@ -31,26 +31,40 @@
     <section>
         <h1>Admin - Product Management</h1>
         <div class="button-container">
-            <button class="add-new">Add New Product</button>
+            <button class="add-new" onclick="location.href='#'">Add New Product</button>
         </div>
         
         <table>
-            <tr><th>ID</th>
+            <tr>
+                <th>ID</th>
                 <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
                 <th>Price</th>
                 <th>Actions</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Matte Flower Case</td>
+                <td>Beautiful matte finish with floral pattern</td>
+                <td>Accessories</td>
+                <td><img src="images/flower.png" alt="Flower Case" ></td>
                 <td>$14.99</td>
-                <td><a href="product-edit.html"><button>Edit</button></a> <button>Delete</button></td>
+                <td><button onclick="location.href='product-edit.html'">Edit</button>
+                    <button>Archive</button>
+                    <button>Delete</button></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Dinosaurs Couple Case</td>
+                <td>Matching couple cases with cute dinosaur design</td>
+                <td>Accessories</td>
+                <td><img src="images/couple.png" alt="Couple Case" ></td>
                 <td>$12.99</td>
-                <td><a href="product-edit.html"><button>Edit</button></a> <button>Delete</button></td>
+                <td><button onclick="location.href='product-edit.html'">Edit</button>
+                    <button>Archive</button>
+                    <button>Delete</button></td>
             </tr>
         </table>
     </section>

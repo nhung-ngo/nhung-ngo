@@ -89,6 +89,9 @@ table th {
     background: #666768;
     color: white;
 }
+table img{
+    width: 50px;
+}
 
 table td button {
     width: auto;
