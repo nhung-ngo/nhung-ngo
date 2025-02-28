@@ -248,6 +248,9 @@ img{
 .order-summary h2{
     text-align: center;
 }
+.order-summary p, button{
+    margin-left: 20px;
+}
 
 /* footer */
 pre.copyright {
