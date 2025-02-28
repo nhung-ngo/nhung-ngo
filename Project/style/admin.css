@@ -98,20 +98,25 @@ table td button {
     display: inline-block;
 }
 /* footer */
-pre.copyright {
-    font-family: monospace;
-    white-space: pre;
-}
-footer {
-    margin-top: auto;
+.footer {
     text-align: left;
     padding: 10px;
     position: absolute;
     bottom: 0;
     left: 0;
 }
-
-.footer-left {
-    margin-left: 10px;
+#footer-bottom{
+    position: relative;
+    text-align: left;
+    padding: 10px;
 }
+
+pre.copyright {
+    font-family: monospace;
+    white-space: pre;
+    margin: 0;
+    padding-left: 10px;
+    
+}
+
 
