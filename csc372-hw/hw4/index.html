@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Nhung Ngo
+    Date: 03.04.2025
+    CSC 372-01
+    
+    Rock Paper Scissors Game
+    This page provides a simple Rock-Paper-Scissors game where the player competes against a computer.
+    Features:
+    - User selects Rock, Paper, or Scissors.
+    - The computer randomly selects an option.
+    - The game determines the winner and updates the results.
+    - Score tracking for wins, losses, and ties.
+    - A reset button to clear scores.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <!-- Big outer box -->
+    <div id="game-container">
+        <h1>ROCK PAPER SCISSORS GAME. GO!</h1>
+
+        <!-- Player's Throw -->
+        <div class="section-box">
+            <div class="choice-container">
+                <div class="choice" id="rock"><img src="images/rock.PNG" alt="Rock"></div>
+                <div class="choice" id="paper"><img src="images/paper.PNG" alt="Paper"></div>
+                <div class="choice" id="scissors"><img src="images/scissors.PNG" alt="Scissors"></div>
+            </div>
+            <h2>YOUR THROW</h2>
+        </div>
+
+        <!-- Computer's Throw -->
+        <div class="section-box">
+            <div id="computer-choice-box">
+                <img id="computer-choice" src="images/question-mark.PNG" alt="Computer Choice">
+            </div>
+            <h2>COMPUTER THROW</h2>
+        </div>
+
+        <!-- Result Section -->
+        <div class="section-box">
+            <h2>RESULTS: <span id="result-text">Make your move!</span></h2>
+            <button id="play-again">Play Again</button>
+        </div>
+
+        <div class="section-box">
+            <h2>Score</h2>
+            <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span> | Ties: <span id="ties">0</span></p>
+            <button id="reset-score">Reset Score</button>
+        </div>
+    </div>
+
+</body>
+</html>
