@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update score display on page load
     updateScoreDisplay();
 
+    /**
+     * Handles player selection when they click on a choice (rock, paper, scissors).
+     * Highlights the selected choice and starts the game logic.
+     */
     choices.forEach(choice => {
         choice.addEventListener("click", function() {
             // Remove previous selection
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Determine winner
                 let result = getWinner(playerChoice, computerMove);
-                resultText.textContent = `RESULTS: ${result}`;
+                resultText.textContent = result;
 
                 // Update score tracking
                 if (result === "You win!") {
@@ -69,8 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    /**
+     * Determines the winner based on the player's and computer's choices.
+     * @param {string} player - The player's choice (rock, paper, or scissors)
+     * @param {string} computer - The computer's choice image path
+     * @returns {string} - The result message ("You win!", "You lose!", or "It's a tie!")
+     */
     function getWinner(player, computer) {
-        const computerMove = computer.split("/").pop().split(".")[0]; // Extract move name
+        const computerMove = computer.split("/").pop().split(".")[0]; 
 
         if (player === computerMove) return "It's a tie!";
         if ((player === "rock" && computerMove === "scissors") ||
@@ -81,12 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
         return "You lose!";
     }
 
+    /**
+     * Updates the score display on the webpage.
+     */
     function updateScoreDisplay() {
         winsDisplay.textContent = wins;
         lossesDisplay.textContent = losses;
         tiesDisplay.textContent = ties;
     }
 
+    /**
+     * Resets the game state when "Play Again" is clicked.
+     * Clears highlights, resets the computer's choice, and updates the result text.
+     */
     playAgainButton.addEventListener("click", () => {
         // Remove selection highlight from player choices
         choices.forEach(choice => choice.classList.remove("selected"));
@@ -98,9 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
         computerChoiceBox.style.border = "3px solid #ccc";
 
         // Reset result text
-        resultText.textContent = "RESULTS: Make your move!";
+        resultText.textContent = " Make your move!";
     });
-
+    
+    /**
+     * Resets the scores when "Reset Score" is clicked.
+     * Clears localStorage and updates the score display.
+     */
     resetScoreButton.addEventListener("click", () => {
         // Reset scores
         wins = 0;
